@@ -1,0 +1,21 @@
+@mixin breakpoint($bp) {
+	@media (max-width: $bp) {
+		@content;
+	}
+}
+
+@mixin hover {
+    &.active {
+        @content;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin shadow {
+    box-shadow: 0 0 3px transparentize(#000, 0.7);
+}
